@@ -19,5 +19,8 @@ func NewHandler() http.Handler {
 
 	mux.HandleFunc("GET /peminjam/{nama}/kuota", handleGetKuotaPeminjam)
 
+	// Change Request A: Dashboard Ringkasan Harian
+	mux.HandleFunc("GET /ringkasan", handleGetRingkasan)
+	
 	return mux
 }
