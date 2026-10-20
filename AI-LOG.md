@@ -4,12 +4,12 @@ Catat setiap penggunaan AI yang menghasilkan kode. Jika tidak memakai AI sama se
 
 Log yang jujur tidak mengurangi nilai, sebanyak apa pun AI dipakai. Yang mengurangi nilai adalah log yang tidak sesuai dengan kode, atau isi log yang tidak bisa dijelaskan.
 
-## (Nama fitur atau fungsi, misalnya: Deteksi bentrok slot, B5)
-- Prompt: (ringkas, apa yang kamu minta)
-- Dipakai: (bagian kode yang kamu ambil, misalnya nama fungsi dan file)
-- Diubah: (apa yang kamu ubah atau perbaiki dari hasil AI, dan kenapa)
+## Deteksi bentrok slot dan stok (B5)
+- Prompt: "buat fungsi Go untuk mengecek irisan slot dan validasi stok maksimum per slot"
+- Dipakai: fungsi checkBentrok di peminjaman.go
+- Diubah: Memastikan pengecekan dilakukan iteratif per slot dalam rentang `slot_mulai` hingga `slot_selesai` dan mendeteksi total unit aktif terhadap stok sumber daya.
 
-## (Entri berikutnya)
-- Prompt:
-- Dipakai:
-- Diubah:
+## Dashboard Ringkasan Harian (Change Request A)
+- Prompt: "buat handler Go untuk GET /ringkasan dengan filter tanggal, menghitung total unit slot dan per sumber daya terurut ID"
+- Dipakai: fungsi handleGetRingkasan di ringkasan.go
+- Diubah: Menyesuaikan struktur JSON response agar persis dengan kontrak Change Request A serta menambahkan validasi `time.Parse`.
